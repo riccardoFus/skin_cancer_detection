@@ -22,9 +22,6 @@ classes = {4: ('nv', ' melanocytic nevi'),
 
 model = load_model("C:\\Users\\fusyr\\OneDrive\\Documenti\\Riccardo\\Progetti\\skin-cancer-detection-cnn\\multi class classifier\\Skin Cancer.h5")
 
-with open("C:\\Users\\fusyr\\OneDrive\\Documenti\\Riccardo\\Progetti\\skin-cancer-detection-cnn\\skin-cancer-prediction\\model\\class_indices.json", 'r') as json_file:
-    class_indices = json.load(json_file)
-
 def predict_cancer(image_path):
     img = keras_image.load_img(image_path, target_size=(IMAGE_SIZE, IMAGE_SIZE))
     img_array = keras_image.img_to_array(img)
